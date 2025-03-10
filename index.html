@@ -1,77 +1,100 @@
+<html>
+    <head>
 
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    
-    <title>A Special Question for You</title>
-    <style>
-        img{
-            height: 300px;
-            width: 300px;
-         
-        }
-        body {
-            text-align: center;
-            font-family: Arial, sans-serif;
-            background-color: #ffe6e6;
-            color: #333;
-            padding: 50px;
-        }
-        .container {
-            margin-top: 200px;
-            margin-left: auto;
-            
-            padding: 20px;
+    <body>
+        <style>
+            html,body{
+                overflow: hidden;
+                background-color: #161616;
+                transform:scale(1.5);
+            }
+            .b
+            {
+                background-color:#fff;
+                text-align: center;
+                margin-top: 30px;
+                margin-left: 650px;
+                width: 100px;
+                height: 30px;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                position:relative;
+                z-index: 0;
+                border-radius: 12px;
+            }
+            .b::after{
+                content:"";
+                z-index: -1;
+                position: absolute;
+            background-color: #333;
+            left:0;
+            top: 0;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            display: inline-block;
-        }
-        h1 {
-            color: #ff4d4d;
-        }
-        .buttons {
-            margin-top: 20px;
-        }
-        .btn {
-            padding: 10px 20px;
-            font-size: 18px;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        .yes {
-            background-color:lightgreen;
-            color: white;
-        }
-        .yes:hover {
 
-            background-color: #218838;
-        }
-        .no {
-            background-color: #dc3545;
-            color: white;
-            position: absolute;
-        }
-    </style>
-    <script>
-        function moveNoButton() {
-            let noButton = document.getElementById("noButton");
-            noButton.style.top = Math.random() * window.innerHeight + "px";
-            noButton.style.left = Math.random() * window.innerWidth + "px";
-        }
-    </script>
+            }
+            .b::before{
+                content: "";
+                background: linear-gradient(45deg,#ff0000,#ff7300,#fffb00,#48ff00,#00ffd5,#002bff,#ff00cb,#ff0000);
+              position: absolute;
+              z-index: -1;
+               background-size: 600%;
+            left:-2px;
+            top: -2px;
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            filter: blur(8px);
+            
+            animation: glowing 20s linear infinite;
+            transition: opacity.3s ease-in-out;
+            border-radius: 10px;
+            opacity: 1;
+
+            }
+            @keyframes glowing{
+                0%{
+                    background-position: 0,0; }
+                    50%{ background-position: 400%,0;}
+                    100%{ background-position: 0,0;}
+                }
+            .b:hover::before{
+                opacity: 1;
+            }
+            .b:active:after{
+                background: transparent;
+            }
+            .b:active{
+                color: #000;
+                font-weight: bold;
+            }
+            .a
+            {
+                margin-top: 200px;
+                margin-left: 500px;
+                border-color:2px solid black;
+                background-color: rgb(98, 150, 98);
+                color: black;
+                
+            }
+        </style>
+
+    </body>
+<table border="2" class="a">
+
+
+<tr><th>first name</th><td><input type="text" placeholder="enter your first name" required autofocus></td></tr>    
+<tr><th>second name</th><td><input type="text" placeholder="enter your second name" required></td></tr> 
+<tr><th>phone number</th><td><input type="number" placeholder="enter your number" required></td></tr>  
+<tr><th>email id</th><td><input type="email" placeholder="enter your email" required></td></tr>  
+<tr><th>website url</th><td><input type="url" placeholder="enter website url" required></td></tr>  
+<tr><th>DOB</th><td><input type="datetime-local" required></td></tr>  
+<tr><th>ability to learn tecnology</th><td><input type="range" required></td></tr>  
+<tr><th>time for registration</th><td><input type="time" required></td></tr>  
+
+</table>
+<button class="b" onclick="alert('this is just a demo it doesnt wrk any further')">submit</button>
+
+
+
 </head>
-<body>
-
-    <div class="container">
-        <a href="https://ibb.co/7tfzwQ38"><img src="https://i.ibb.co/yF9RwpzG/IMG-20250310-060857-779-1.jpg" alt="IMG-20250310-060857-779-1" border="0"></a>
-        <h1>Will you be mine? ❤️smell mam</h1>
-        <p>I've been meaning to ask you this for a while...</p>
-        <div class="buttons">
-            <button class="btn yes" onclick="alert('thank you mam  ❤️')">Yes</button>
-            <button class="btn no" id="noButton" onmouseover="moveNoButton()">No</button>
-        </div>
-    </div>
-</body>
 </html>
