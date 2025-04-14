@@ -1,99 +1,169 @@
-<html>
-    <head>
 
-    <body>
-        <style>
-            html,body{
-                overflow: hidden;
-                background-color: #161616;
-                transform:scale(1.5);
-            }
-            .b
-            {
-                background-color:#fff;
-                text-align: center;
-                margin-top: 30px;
-                margin-left: 650px;
-                width: 100px;
-                height: 30px;
-                border: none;
-                outline: none;
-                cursor: pointer;
-                position:relative;
-                z-index: 0;
-                border-radius: 12px;
-            }
-            .b::after{
-                content:"";
-                z-index: -1;
-                position: absolute;
-            background-color: #333;
-            left:0;
-            top: 0;
-            border-radius: 10px;
 
-            }
-            .b::before{
-                content: "";
-                background: linear-gradient(45deg,#ff0000,#ff7300,#fffb00,#48ff00,#00ffd5,#002bff,#ff00cb,#ff0000);
-              position: absolute;
-              z-index: -1;
-               background-size: 600%;
-            left:-2px;
-            top: -2px;
-            width: calc(100% + 4px);
-            height: calc(100% + 4px);
-            filter: blur(8px);
-            
-            animation: glowing 20s linear infinite;
-            transition: opacity.3s ease-in-out;
-            border-radius: 10px;
-            opacity: 1;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>A Special Question for You</title>
+    <style>
 
-            }
-            @keyframes glowing{
-                0%{
-                    background-position: 0,0; }
-                    50%{ background-position: 400%,0;}
-                    100%{ background-position: 0,0;}
-                }
-            .b:hover::before{
-                opacity: 1;
-            }
-            .b:active:after{
-                background: transparent;
-            }
-            .b:active{
-                color: #000;
-                font-weight: bold;
-            }
-            .a
-            {
+
+.m:hover{height:300px; width:700px; transition-delay: 0.3s;transition-duration:2s ;}
+    span
+{
+    position: relative;
+font-family: "lato",sans-serif;
+top:  20px;
+color:azure;
+font-size: 50px;
+display: inline-block;
+text-shadow: 0px 0px 10px #ec3e1f;
+text-shadow: 0 1px 0 #fc0b0b,0 2px 0 #f10909,0 3p 0 #ff0808,0 4px 0 #fd0808,0 5px 0 #f30606,0 6px 0 #f80c0c.0 6px 0 #fc0808,0 7px 0 #fa0909,0 8px 0 #f70707,0 9px 0 transparent,0 10px rgba(0,0,0.3);
+
+animation: bounce 0.4s ease infinite alternate;
+
+
+}
+span:nth-child(1){
+    animation-delay: 0.1s;
+    
+  }
+
+ span:nth-child(2){
+    animation-delay: 0.2s;
+    }
+
+ span:nth-child(3)
+{
+    animation-delay: 0.3s; 
+ }
+span:nth-child(4)
+{
+    animation-delay: 0.4s;
+ }
+ span:nth-child(5)
+{
+    animation-delay: 0.4s;
+    
+}
+    span:nth-child(6)
+    {
+        animation-delay :o.6s;
+      
+    }
+    span:nth-child(7)
+    {
+        animation-delay: 0.7s;
+    }
+        @keyframes bounce
+        {
+            100%{
+                top: 0px; 
+                text-shadow: 0 1px 0 #b7b7b7,0 2px 0 #b7b7b7,0 3p 0 #b7b7b7,0 4px 0 #b7b7b7,0 5px 0 #b7b7b7,0 6px 0 #b7b7b7.0 6px 0 #b7b7b7,0 7px 0 #b7b7b7,0 8px 0 #b7b7b7,0 9px 0 transparent,0 10px rgba(0,0,0.3);
         
-                border-color:2px solid black;
-                background-color: rgb(98, 150, 98);
-                color: black;
-                
             }
-        </style>
+        
+        }
+        span:hover{
+            font-size: 100px;
+        }
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        background-color: pink;
+            color: #333;
+            padding: 50px;
+            
+            
+        }
+        .k{
+            margin-top: 200px;
+            margin-left: auto;
+            background-color:white;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            width: auto;
 
-    </body>
-<table border="2" class="a">
+        }
+        h1 {
+            color: #ff4d4d;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        .btn {
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+        }
+        .yes
+        {
+        width: 100px;
+        height: 50px;
+        background-color: green;
+        }
+        .yes:hover {
+background-color: rgb(140, 201, 140);
+font-size: 60px;
+width: 200px;
+height: 100px;
+transition-duration: 2s;
+transition-delay: 0.3s;
 
-
-<tr><th>first name</th><td><input type="text" placeholder="enter your first name" required autofocus></td></tr>    
-<tr><th>second name</th><td><input type="text" placeholder="enter your second name" required></td></tr> 
-<tr><th>phone number</th><td><input type="number" placeholder="enter your number" required></td></tr>  
-<tr><th>email id</th><td><input type="email" placeholder="enter your email" required></td></tr>  
-<tr><th>website url</th><td><input type="url" placeholder="enter website url" required></td></tr>  
-<tr><th>DOB</th><td><input type="datetime-local" required></td></tr>  
-<tr><th>ability to learn tecnology</th><td><input type="range" required></td></tr>  
-<tr><th>time for registration</th><td><input type="time" required></td></tr>  
-
-</table>
-<button class="b" onclick="alert('this is just a demo it doesnt wrk any further')">submit</button>
-
-
-
+        
+        }
+        .no {
+            background-color: #dc3545;
+            color: white;
+            position: absolute;
+            width: 100px;
+            height: 50px;
+        }
+        .no:hover
+        {background-color: rgb(253, 8, 8);
+font-size: 60px;
+width: 200px;
+height: 100px;
+transition-duration: 2s;
+transition-delay: 0.5s;
+}
+    </style>
+    <script>
+        alert('hello my jamsheena mamji🩵🩵🩵')
+        alert('i wanted to ask you something mamji🩵🩵🩵')
+        alert('shll i mamji🩵🩵🩵')
+        function moveNoButton() {
+            let noButton = document.getElementById("no");
+            noButton.style.top = Math.random() * window.innerHeight + "px";
+            noButton.style.left = Math.random() * window.innerWidth + "px";
+        }
+    </script>
 </head>
+
+
+
+
+
+    <div class="k" style="border-radius: 50px;">
+        <span>U</span>
+        <span><sub>R</sub></span>
+    <span>l</span>
+    <span>o</span>
+    <span>v</span>
+    <span>e</span><br>
+        <img src="data:image/png;base64,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">
+       
+        <h1>Will you be mine? ❤️mam</h1>
+        <p>I've been meaning to ask you this for a while...<sub>SHAFIQ😉</sub></p>
+        <div class="buttons">
+            <button class="yes" onclick="alert('thank you mam ❤️')">yes😘<a href="https://wa.link/n84x9g"></a></button>
+            <button class="no" id="no" onclick="moveNoButton()">No😣</button>
+        </div>
+
+</body>
+
+    <k  style="text-align:left; font-size: 10px;">created by azar</k>
+
 </html>
